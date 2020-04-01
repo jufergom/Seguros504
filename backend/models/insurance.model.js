@@ -4,7 +4,6 @@ const Schema = mongoose.Schema;
 
 const insuranceSchema = new Schema(
   {
-    _id: Schema.Types.ObjectId,
     name: { type: String, required: true },
     description: { type: String, required: true },
     points: { type: Number, required: true },
