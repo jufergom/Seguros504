@@ -1,9 +1,10 @@
 import React from 'react';
+import Checkout from './Checkout';
 
 function Home() {
     return(
         <div>
-            <h1>Seguros 504</h1>
+            <Checkout />
         </div>
     );
 }
