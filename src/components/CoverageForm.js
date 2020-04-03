@@ -1,32 +1,31 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
-import FormControl from '@material-ui/core/FormControl';
 import FormGroup from '@material-ui/core/FormGroup';
 import FormLabel from '@material-ui/core/FormLabel';
 
-export default function PaymentForm() {
+export default function CoverageForm() {
     const [area, setArea] = React.useState('Nacional');
     const [time, setTime] = React.useState('Partial');
     
     //for checkboxes
     const [state, setState] = React.useState({
-        gilad: false,
-        jason: false,
-        antoine: false,
+        ambulance: false,
+        consultation: false,
+        pregnancy: false,
+        birth: false
       });
     
       const handleChange = (event) => {
         setState({ ...state, [event.target.name]: event.target.checked });
       };
     
-      const { gilad, jason, antoine } = state;
-      const error = [gilad, jason, antoine].filter((v) => v).length !== 2;
+      const { ambulance, consultation, pregnancy, birth } = state;
+      //const error = [gilad, jason, antoine].filter((v) => v).length !== 2;
 
     const handleAreaChange = (event) => {
         setArea(event.target.value);
@@ -38,7 +37,7 @@ export default function PaymentForm() {
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
-        Payment method
+        Cobertura
       </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
@@ -59,11 +58,11 @@ export default function PaymentForm() {
         <FormLabel component="legend">Servicios</FormLabel>
         <FormGroup>
           <FormControlLabel
-            control={<Checkbox checked={gilad} onChange={handleChange} name="gilad" />}
+            control={<Checkbox checked={ambulance} onChange={handleChange} name="ambulance" />}
             label="Servicios de ambulancia"
           />
           <FormControlLabel
-            control={<Checkbox checked={jason} onChange={handleChange} name="jason" />}
+            control={<Checkbox checked={consultation} onChange={handleChange} name="consultation" />}
             label="Consultas medicas semestrales"
           />
         </FormGroup>
@@ -72,11 +71,11 @@ export default function PaymentForm() {
         <FormLabel component="legend">Control de maternidad</FormLabel>
         <FormGroup>
           <FormControlLabel
-            control={<Checkbox checked={gilad} onChange={handleChange} name="gilad" />}
+            control={<Checkbox checked={pregnancy} onChange={handleChange} name="pregnancy" />}
             label="Cobertura de embarazo"
           />
           <FormControlLabel
-            control={<Checkbox checked={jason} onChange={handleChange} name="jason" />}
+            control={<Checkbox checked={birth} onChange={handleChange} name="birth" />}
             label="Asistencia durante el parto"
           />
         </FormGroup>
