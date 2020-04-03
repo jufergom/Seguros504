@@ -22,18 +22,13 @@ export default function WorkSection() {
     <div className={classes.section}>
       <GridContainer justify="center">
         <GridItem cs={12} sm={12} md={8}>
-          <h2 className={classes.title}>Work with us</h2>
-          <h4 className={classes.description}>
-            Divide details about your product or agency work into parts. Write a
-            few lines about each one and contact us about any further
-            collaboration. We will responde get back to you in a couple of
-            hours.
-          </h4>
+          <h2 className={classes.title}>Tienes alguna sugerencia?</h2>
+          <h4 className={classes.description}>Escribenos!</h4>
           <form>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
                 <CustomInput
-                  labelText="Your Name"
+                  labelText="Tu nombre"
                   id="name"
                   formControlProps={{
                     fullWidth: true
@@ -42,7 +37,7 @@ export default function WorkSection() {
               </GridItem>
               <GridItem xs={12} sm={12} md={6}>
                 <CustomInput
-                  labelText="Your Email"
+                  labelText="Tu Email"
                   id="email"
                   formControlProps={{
                     fullWidth: true
@@ -50,7 +45,7 @@ export default function WorkSection() {
                 />
               </GridItem>
               <CustomInput
-                labelText="Your Message"
+                labelText="Tu Mensaje"
                 id="message"
                 formControlProps={{
                   fullWidth: true,

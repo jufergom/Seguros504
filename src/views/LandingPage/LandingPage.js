@@ -48,7 +48,7 @@ export default function LandingPage(props) {
       <Parallax filter image={require('../../assets/img/bgLandingPage2.jpg')}>
         <div className={classes.container}>
           <GridContainer>
-            <GridItem xs={12} sm={12} md={6}>
+            <GridItem xs={12} sm={12} md={12}>
               <h1 className={classes.title}>
                 Te ayudamos a encontrar el seguro que necesitas para las
                 sorpresas que no quieres.
@@ -68,7 +68,7 @@ export default function LandingPage(props) {
                 rel="noopener noreferrer"
               >
                 <i className="fas fa-play" />
-                Encuentra mi seguro
+                Encuentra tu seguro
               </Button>
             </GridItem>
           </GridContainer>
