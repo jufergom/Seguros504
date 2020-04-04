@@ -24,11 +24,18 @@ import ProductSection from './Sections/ProductSection.js';
 import TeamSection from './Sections/TeamSection.js';
 import WorkSection from './Sections/WorkSection.js';
 
+import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 const dashboardRoutes = [];
 
 const useStyles = makeStyles(styles);
 
 export default function LandingPage(props) {
+  const history = useHistory();
+  const goToInsuranceFrom = () => {
+    history.push('/insuranceform');
+  };
   const classes = useStyles();
   const { ...rest } = props;
   return (
@@ -60,16 +67,17 @@ export default function LandingPage(props) {
                 impression.
               </h4> */}
               <br />
-              <Button
-                color="danger"
-                size="lg"
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ref=creativetim"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fas fa-play" />
-                Encuentra tu seguro
-              </Button>
+              <Link to={{ pathname: '/viewinsurance' }}>
+                <Button
+                  color="danger"
+                  size="lg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fas fa-play" />
+                  Encuentra tu seguro
+                </Button>
+              </Link>
             </GridItem>
           </GridContainer>
         </div>

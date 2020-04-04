@@ -5,6 +5,7 @@ const Schema = mongoose.Schema;
 const insuranceSchema = new Schema(
   {
     name: { type: String, required: true },
+    image: { type: String, required: true },
     description: { type: String, required: true },
     points: { type: Number, required: true },
     primaryMed: { type: Boolean, require: true },

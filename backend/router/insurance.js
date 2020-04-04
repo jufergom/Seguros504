@@ -56,7 +56,6 @@ router.route('/update/:id').post((req, res) => {
     insurance.urgency = req.body.urgency;
     insurance.specialty = req.body.specialty;
     insurance.diagnostics = req.body.diagnostics;
-    r;
     insurance
       .save()
       .then(() => res.json('Insurance updated'))
